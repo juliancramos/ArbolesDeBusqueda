@@ -7,7 +7,7 @@ std::map<std::string, Song>& ArbolRN::getArbolRN() {
 
 //Inserta un nuevo nodo en el arbol.
 void ArbolRN::insert(Song& song) {
-    arbolRN.insert({ song.getId(), song }); // Use the curly braces to create an initializer list 
+    arbolRN.insert({ song.getId(), song }); 
 }
 
 //Para PROBAR DESPUES
