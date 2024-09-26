@@ -65,5 +65,18 @@ bool searchData(TArbol& arbol, const std::string& id) {
     // Llama al método search del árbol
     return arbol->search(Song(id)); 
 }
+template <class TArbol>
+bool deleteData(TArbol& arbol, const std::string& id) {
+    // Llama al método search del árbol para verificar si la canción existe
+    bool esta = arbol->search(Song(id)); 
+
+    if (esta) {
+        // Si la canción existe, la elimina
+        arbol->remove(Song(id));
+        return true;  
+    }
+    return false; 
+}
+
 
 #endif // _ARBOL_HXX_

@@ -9,5 +9,7 @@ bool addData(TArbol& arbol, const std::string& nomArch);
 template<class TArbol>
 bool searchData(TArbol& arbol, const std::string& id);
 
+template<class TArbol>
+bool deleteData(TArbol& arbol, const std::string& id);
 #include "Arbol.hxx"
 #endif // _ARBOL_H

@@ -93,6 +93,44 @@ int main(int argc, char* argv[]) {
     } else {
         std::cout << "Error al leer \"" << argv[2] << "\" para busqueda en el árbol Rojo-Negro." << std::endl;
     }
+
+    // //Eliminacion de datos 
+    // //Heap
+    // std::clock_t inicioEliminacionHeap = std::clock();
+    // bool eliminacionHeap = deleteData(myHeap, argv[2]);
+    // std::clock_t finEliminacionHeap = std::clock();
+    // double tiempoEliminacionHeap = (finEliminacionHeap - inicioEliminacionHeap) / double(CLOCKS_PER_SEC);
+
+    // if (eliminacionHeap) {
+    //     std::cout << "Tiempo de eliminación montículo = " << tiempoEliminacionHeap << " segs." << std::endl;
+    // } else {
+    //     std::cout << "Error al leer \"" << argv[2] << "\" para eliminación en el montículo." << std::endl;
+    // }
+
+    // // Eliminación en árbol AVL
+    // std::clock_t inicioEliminacionAVL = std::clock();
+    // bool eliminacionAVL = deleteData(myAVLTree, argv[2]);
+    // std::clock_t finEliminacionAVL = std::clock();
+    // double tiempoEliminacionAVL = (finEliminacionAVL - inicioEliminacionAVL) / double(CLOCKS_PER_SEC);
+
+    // if (eliminacionAVL) {
+    //     std::cout << "Tiempo de eliminación árbol AVL = " << tiempoEliminacionAVL << " segs." << std::endl;
+    // } else {
+    //     std::cout << "Error al leer \"" << argv[2] << "\" para eliminación en el árbol AVL." << std::endl;
+    // }
+
+    // // Eliminación en árbol Rojo-Negro
+    // std::clock_t inicioEliminacionRN = std::clock();
+    // bool eliminacionRN = deleteData(myRNTree, argv[2]);
+    // std::clock_t finEliminacionRN = std::clock();
+    // double tiempoEliminacionRN = (finEliminacionRN - inicioEliminacionRN) / double(CLOCKS_PER_SEC);
+
+    // if (eliminacionRN) {
+    //     std::cout << "Tiempo de eliminación árbol Rojo-Negro = " << tiempoEliminacionRN << " segs." << std::endl;
+    // } else {
+    //     std::cout << "Error al leer \"" << argv[2] << "\" para eliminación en el árbol Rojo-Negro." << std::endl;
+    // }
+
     
 
     
