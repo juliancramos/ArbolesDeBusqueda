@@ -27,24 +27,26 @@ int main() {
     
 
   
-
+    //To do #16, 17. Se llama a la funcion addData, la cual tokeniza, crea un objeto de tipo song y la añade al arbol
     //Para el árbol AVL
     if (addData(myAVLTree, csvFileName)) {
-        myAVLTree->inOrden();
         std::cout << "\nSe añadieron los datos correctamente al árbol AVL" << std::endl;
     }
 
-    // // Para el árbol Roji-Negro
-    // if (addData(myRNTree, csvFileName)) {
-    //     myRNTree->inOrden();
-    //     std::cout << "\nSe añadieron los datos correctamente al árbol Rojo-Negro" << std::endl;
-    // }
+    // Para el árbol Roji-Negro
+    if (addData(myRNTree, csvFileName)) {
+        std::cout << "\nSe añadieron los datos correctamente al árbol Rojo-Negro" << std::endl;
+    }
 
-    // //Para el montículo
-    // if (addData(myHeap, csvFileName)) {
-    //     myHeap->inOrden();  
-    //     std::cout << "\nSe añadieron los datos correctamente al montículo" << std::endl;
-    // }
+    //Para el montículo
+    if (addData(myHeap, csvFileName)) {  
+        std::cout << "\nSe añadieron los datos correctamente al montículo" << std::endl;
+    }
+
+    //To do #18
+    myRNTree->inOrden();
+    myAVLTree->inOrden();
+    myHeap->inOrden();
 
 
     
