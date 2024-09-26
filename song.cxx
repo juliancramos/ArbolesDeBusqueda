@@ -15,7 +15,7 @@ std::string Song::getId() const {
 }
 
 std::string Song::getName() const {
-    return nombre;
+    return name;
 }
 
 std::string Song::getGenre() const {
@@ -48,7 +48,7 @@ void Song::setId(const std::string& newId) {
 }
 
 void Song::setName(const std::string& newNombre) {
-    nombre = newNombre;
+    name = newNombre;
 }
 
 void Song::setGenre(const std::string& newGenre) {

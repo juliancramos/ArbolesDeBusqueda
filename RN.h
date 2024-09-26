@@ -4,8 +4,11 @@
 #include <map>
 #include "song.h"
 
+
 class ArbolRN {
-public:
+  private:
+    std::map<std::string, Song> arbolRN; // mapa actua como arbol almacenamiento
+  public:
     ArbolRN() = default;
     ~ArbolRN() = default;
     std::map<std::string, Song>& getArbolRN(); // Ref. al arbol
@@ -13,9 +16,9 @@ public:
     void remove(std::string id);
     Song* search(std::string id);
 
-private:
-    std::map<std::string, Song> arbolRN; // mapa actua como arbol almacenamiento
 };
+#include "RN.hxx"
+
 
 #endif // ARBOLRN_H
 
