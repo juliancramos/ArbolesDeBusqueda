@@ -102,3 +102,7 @@ std::ostream& operator<<(std::ostream& os, const Song& song) {
        << "ms, Explicit: " << (song.isExplicitContent() ? "Yes" : "No") << "\n";
     return os;
 }
+
+std::string Song::getKey() const {
+        return id; 
+    }

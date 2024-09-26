@@ -60,4 +60,10 @@ bool addData(TArbol& arbol, const std::string& nomArch) {
     return true;
 }
 
+template <class TArbol>
+bool searchData(TArbol& arbol, const std::string& id) {
+    // Llama al método search del árbol
+    return arbol->search(Song(id)); 
+}
+
 #endif // _ARBOL_HXX_

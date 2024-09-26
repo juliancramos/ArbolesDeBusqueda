@@ -21,8 +21,7 @@ class Song {
             std::string artists, std::string album,
             int popularity, int durationMs, bool explicitContent);
 
-    Song() : id(""), name(""), genre(""), artists(""), album(""), popularity(0), durationMs(0), explicitContent(false) {}
-
+        
         friend std::ostream& operator<<(std::ostream& os, const Song& song); //Se usa para imprimer los datos de tipo song
 
         // Getters
@@ -49,6 +48,10 @@ class Song {
         bool operator>(const Song& other) const;
         bool operator<(const Song& other) const;
         bool operator==(const Song& other) const;
+
+        Song() : id(""), name(""), genre(""), artists(""), album(""), popularity(0), durationMs(0), explicitContent(false) {}
+        Song(const std::string& id) : id(id) {}
+        std::string getKey() const;
 
 };
 

@@ -13,11 +13,12 @@ public:
 
     std::map<std::string, T>& getArbolRN(); // Ref. al árbol
     void insert(T& item);
-    void remove(std::string id);
-    T* search(std::string id);
+    bool remove(T val);
+    T* search(T val);
 
     void inOrden() const; // función inorden
     void inOrden(typename std::map<std::string, T>::const_iterator it) const;
+    
 };
 
 #include "RN.hxx"

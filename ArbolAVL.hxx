@@ -79,7 +79,7 @@ NodoAVL<T>* ArbolAVL<T>::insertarNodo(NodoAVL<T>* nodo, T valorDato, bool& inser
 
 
 template <class T>
-bool ArbolAVL<T>::eliminar(T valorDato) {
+bool ArbolAVL<T>::remove(T valorDato) {
     NodoAVL<T>* nodo = raiz;
     NodoAVL<T>* nodoPadre = nullptr;
 
@@ -154,7 +154,7 @@ bool ArbolAVL<T>::eliminar(T valorDato) {
 
 
 template <class T>
-bool ArbolAVL<T>::buscar(T valorDato) {
+bool ArbolAVL<T>::search(T valorDato) {
     if(raiz!=nullptr){
         NodoAVL<T>* nodo= raiz;
         while(nodo!=nullptr){

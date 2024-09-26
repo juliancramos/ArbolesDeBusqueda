@@ -18,8 +18,8 @@ class Monticulo{
     ~Monticulo();
     bool esVacio();
     bool insert(T val);
-    bool eliminar(T val);
-    bool buscar(T val);
+    bool remove(T val);
+    bool search(T val);
 
     void inOrden() const;
 };

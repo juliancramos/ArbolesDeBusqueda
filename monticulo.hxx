@@ -25,7 +25,7 @@ bool Monticulo<T>:: insert(T val){
 }
 
 template<class T>
-bool Monticulo<T>:: eliminar(T val){
+bool Monticulo<T>:: remove(T val){
     // Buscar el dato en el vector con un for
     typename std::deque<T>::iterator it;
      for(it=vec.begin(); it!= vec.end() ; it++){
@@ -46,7 +46,7 @@ bool Monticulo<T>:: eliminar(T val){
 }
 
 template <class T>
-bool Monticulo<T>:: buscar(T val){
+bool Monticulo<T>:: search(T val){
 typename std::deque<T>::iterator it;
 for(it=vec.begin() ; it!=vec.end(); it++){
     if(*it == val){

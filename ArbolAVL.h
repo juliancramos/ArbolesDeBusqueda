@@ -15,8 +15,8 @@ public:
     int altura();
     int tamano();
     bool insert(T valorDato);
-    bool eliminar(T valorDato); 
-    bool buscar(T valorDato); 
+    bool remove(T valorDato); 
+    bool search(T valorDato); 
     void preOrden();
     void inOrden();
     void posOrden();

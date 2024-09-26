@@ -12,23 +12,6 @@ void ArbolRN<T>::insert(T& item) {
     arbolRN.insert({ item.getId(), item }); 
 }
 
-// Elimina un nodo del árbol.
-template<class T>
-void ArbolRN<T>::remove(std::string id) {
-    arbolRN.erase(id); // Elimina el elemento con el id dado
-}
-
-// Busca un nodo en el árbol.
-template<class T>
-T* ArbolRN<T>::search(std::string id) {
-    auto it = arbolRN.find(id);
-    if (it != arbolRN.end()) {
-        return &it->second;
-    } else {
-        return nullptr;
-    }
-}
-
 template<class T>
 void ArbolRN<T>::inOrden() const {
     inOrden(arbolRN.cbegin());
@@ -44,10 +27,32 @@ void ArbolRN<T>::inOrden(typename std::map<std::string, T>::const_iterator it) c
 }
 
 template<class T>
-ArbolRN<T>::ArbolRN() {
+bool ArbolRN<T>::remove(T val) {
+    std::string key = val.getKey();
+    auto it = arbolRN.fin(key);
+    if (it != arbolRN.end()) {
+        arbolRN.erase(it); 
+        return true; 
+    }
+    return false; 
 }
 
+// RN.hxx
+template <class T>
+T* ArbolRN<T>::search(T val) {
+    std::string key = val.getKey();
+    auto it = arbolRN.find(key); 
+
+    if (it != arbolRN.end()) {
+        return &it->second; 
+    }
+    return nullptr;
+}
+
+
+template<class T>
+ArbolRN<T>::ArbolRN() {
+}
 template<class T>
 ArbolRN<T>::~ArbolRN() {
-    // Puedes inicializar algo si es necesario
 }
