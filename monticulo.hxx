@@ -17,9 +17,9 @@ bool Monticulo<T>:: esVacio(){
 }
 
 template <class T>
-bool Monticulo<T>:: insertar(T val){
+bool Monticulo<T>:: insert(T val){
  vec.push_back(val);
- vec.push_heap(vec.begin(), vec.end());
+ std::push_heap(vec.begin(), vec.end());
  
  return true;
 }
@@ -27,9 +27,9 @@ bool Monticulo<T>:: insertar(T val){
 template<class T>
 bool Monticulo<T>:: eliminar(T val){
     // Buscar el dato en el vector con un for
-     std::deque<T>::iterator it;
-     for(it=vec.begin(); it!= vec.end(), it++){
-        if(*it=val){
+    typename std::deque<T>::iterator it;
+     for(it=vec.begin(); it!= vec.end() ; it++){
+        if(*it == val){
         std::pop_heap(vec.begin(), vec.end());
         T elim_data = vec.back();
         // Eliminar esa posicion del vector
@@ -47,8 +47,8 @@ bool Monticulo<T>:: eliminar(T val){
 
 template <class T>
 bool Monticulo<T>:: buscar(T val){
-std::deque<T>::iterator it;
-for(it=vec.begin ; it!=vec.end(); it++){
+typename std::deque<T>::iterator it;
+for(it=vec.begin() ; it!=vec.end(); it++){
     if(*it == val){
         return true;
     }

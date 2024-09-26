@@ -9,6 +9,8 @@ Song::Song(std::string id, std::string name, std::string genre,
       durationMs(durationMs), explicitContent(explicitContent) {}
 
 
+
+
 // Getters
 std::string Song::getId() const {
     return id;
@@ -87,4 +89,16 @@ bool Song::operator<(const Song& other) const {
 
 bool Song::operator==(const Song& other) const {
     return this->getId() == other.getId();
+}
+
+std::ostream& operator<<(std::ostream& os, const Song& song) {
+    os << "ID: " << song.getId() 
+       << ", Name: " << song.getName()
+       << ", Genre: " << song.getGenre()
+       << ", Artists: " << song.getArtists()
+       << ", Album: " << song.getAlbum()
+       << ", Popularity: " << song.getPopularity()
+       << ", Duration: " << song.getDurationMs()
+       << "ms, Explicit: " << (song.isExplicitContent() ? "Yes" : "No") << "\n";
+    return os;
 }

@@ -14,7 +14,7 @@ public:
     T datoRaiz(); 
     int altura();
     int tamano();
-    bool insertar(T valorDato);
+    bool insert(T valorDato);
     bool eliminar(T valorDato); 
     bool buscar(T valorDato); 
     void preOrden();

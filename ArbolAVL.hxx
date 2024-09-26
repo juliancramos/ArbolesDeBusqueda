@@ -46,7 +46,7 @@ int ArbolAVL<T>::tamano() {
 
 
 template <class T>
-bool ArbolAVL<T>::insertar(T valorDato) {
+bool ArbolAVL<T>::insert(T valorDato) {
     bool insertado = false;
     raiz = insertarNodo(raiz, valorDato, insertado);
     balancearArbol();  // Balancear después de la inserción

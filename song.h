@@ -2,6 +2,7 @@
 #define SONG_H
 
 #include <string>
+#include <ostream>
 class Song {
 
     private:
@@ -19,6 +20,10 @@ class Song {
         Song(std::string id, std::string name, std::string genre,
             std::string artists, std::string album,
             int popularity, int durationMs, bool explicitContent);
+
+    Song() : id(""), name(""), genre(""), artists(""), album(""), popularity(0), durationMs(0), explicitContent(false) {}
+
+        friend std::ostream& operator<<(std::ostream& os, const Song& song); //Se usa para imprimer los datos de tipo song
 
         // Getters
         std::string getId() const;

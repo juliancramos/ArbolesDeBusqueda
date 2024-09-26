@@ -57,7 +57,7 @@ int main( int argc, char* argv[] )
 
   // Llenar arbol rojinegro y calcular el tiempo empleado
   std::clock_t inicioLecturaRN = std::clock( );
-  bool lecturaRN = addData( miArbolRN, argv[ 1 ] );
+  //bool lecturaRN = addData( miArbolRN, argv[ 1 ] );
   std::clock_t finLecturaRN = std::clock( );
   double tiempoLecturaRN = ( finLecturaRN - inicioLecturaRN ) / double( CLOCKS_PER_SEC );
   if( lecturaRN )
@@ -73,7 +73,7 @@ int main( int argc, char* argv[] )
   
   // Llenar arbol AVL y calcular el tiempo empleado
   std::clock_t inicioLecturaAVL = std::clock( );
-  bool lecturaAVL = addData( miArbolAVL, argv[ 1 ] );
+  //bool lecturaAVL = addData( miArbolAVL, argv[ 1 ] );
   std::clock_t finLecturaAVL = std::clock( );
   double tiempoLecturaAVL = ( finLecturaAVL - inicioLecturaAVL ) / double( CLOCKS_PER_SEC );
   if( lecturaAVL )
@@ -237,7 +237,7 @@ bool addData( TArbol& arbol, const std::string& nomArch )
     // TODO #16: Leer la linea del archivo y tokenizar para crear un objeto tipo song
     
     // TODO #17: Implementar la función insert en cada uno de los arboles
-    arbol.insert( valor );  // El arbol debe proveer el metodo "insert"
+    //arbol.insert( valor );  // El arbol debe proveer el metodo "insert"
 
   } // elihw
   entrada.close( );
@@ -258,7 +258,7 @@ bool searchData( TArbol& arbol, const std::string& nomArch )
     // TODO #20: Leer la linea del archivo y extraer el identificador a buscar
     
     // TODO #21: Implementar la función search en cada uno de los arboles
-    arbol.search( valor );  // El arbol debe proveer el metodo "search"
+    //arbol.search( valor );  // El arbol debe proveer el metodo "search"
 
   } // elihw
   entrada.close( );
@@ -278,7 +278,7 @@ bool deleteData( TArbol& arbol, const std::string& nomArch )
     // TODO #22: Leer la linea del archivo y extraer el identificador a eliminar
     
     // TODO #23: Implementar la función delete en cada uno de los arboles
-    arbol.delete( valor );  // El arbol debe proveer el metodo "delete"
+    //arbol.delete( valor );  // El arbol debe proveer el metodo "delete"
 
   } // elihw
   entrada.close( );

@@ -4,8 +4,11 @@
 #include <sstream>
 #include <algorithm> //Para std::remove
 #include <cctype>
+
 #include "RN.h"
 #include "song.h"
+#include "monticulo.h"
+#include "ArbolAVL.h"
 
 template<class TArbol>
 bool addData(TArbol& arbol, const std::string& nomArch) {
@@ -44,7 +47,7 @@ bool addData(TArbol& arbol, const std::string& nomArch) {
             Song song(id, name, genre, artists, album, popularity, durationMs, explicitContent);
 
             //Insertar la canción en el árbol
-            arbol.insert(song);
+            arbol->insert(song);
         }
         //Se pusieron estos catch para saber en que esta fallando lectura de ciertas lineas (resueltas)
         catch (const std::invalid_argument& e) {
@@ -64,17 +67,23 @@ int main() {
     std::string csvFileName = "test_all/add.csv"; 
 
     //Crear el árbol RN
-    ArbolRN myTree;
+    //ArbolRN myTree;
+    //Monticulo<Song> myTree;
+
+    ArbolAVL <Song>* myTree= new ArbolAVL<Song>();
+    
 
     if (addData(myTree, csvFileName)) {
         std::cout << "Se añadieron los datos correctamente" << std::endl;
 
-        //Imprimir el contenido del árbol
-        std::cout << "Canciones en el árbol:" << std::endl;
-        for (const auto& [id, song] : myTree.getArbolRN()) {
-            std::cout << "ID: " << id << ", Nombre: " << song.getName() << std::endl;
-        }
+        // //Imprimir el contenido del árbol
+        // std::cout << "Canciones en el árbol:" << std::endl;
+        // for (const auto& [id, song] : myTree.getArbolRN()) {
+        //     std::cout << "ID: " << id << ", Nombre: " << song.getName() << std::endl;
+        // }
     }
+
+    myTree->inOrden();
 
     return 0;
 }
