@@ -20,6 +20,8 @@ class Monticulo{
     bool insert(T val);
     bool eliminar(T val);
     bool buscar(T val);
+
+    void inOrden() const;
 };
 #include "monticulo.hxx"
 

@@ -1,24 +1,25 @@
-#ifndef ARBOLRN_H
-#define ARBOLRN_H
+#ifndef _ARBOL_RN_H
+#define _ARBOL_RN_H
 
 #include <map>
-#include "song.h"
 
-
+template<class T>
 class ArbolRN {
-  private:
-    std::map<std::string, Song> arbolRN; // mapa actua como arbol almacenamiento
-  public:
-    ArbolRN() = default;
-    ~ArbolRN() = default;
-    std::map<std::string, Song>& getArbolRN(); // Ref. al arbol
-    void insert(Song& song);
-    void remove(std::string id);
-    Song* search(std::string id);
+protected:
+    std::map<std::string, T> arbolRN; // El mapa actúa como árbol de almacenamiento
+public:
+    ArbolRN();
+    ~ArbolRN(); 
 
+    std::map<std::string, T>& getArbolRN(); // Ref. al árbol
+    void insert(T& item);
+    void remove(std::string id);
+    T* search(std::string id);
+
+    void inOrden() const; // función inorden
+    void inOrden(typename std::map<std::string, T>::const_iterator it) const;
 };
+
 #include "RN.hxx"
 
-
-#endif // ARBOLRN_H
-
+#endif // _ARBOL_RN_H

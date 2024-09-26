@@ -56,3 +56,10 @@ for(it=vec.begin() ; it!=vec.end(); it++){
 
 return false;
 }
+
+template <class T>
+void Monticulo<T>::inOrden() const {
+    for (size_t i = 0; i < vec.size(); ++i) {
+        std::cout << vec[i] << " ";
+    }
+}
