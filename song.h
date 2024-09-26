@@ -2,7 +2,6 @@
 #define SONG_H
 
 #include <string>
-
 class Song {
 
     private:
